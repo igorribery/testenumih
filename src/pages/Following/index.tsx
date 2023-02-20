@@ -71,17 +71,19 @@ export const Following = () => {
             }
 
             <C.Container>
-                {currentFollowing.map((item, index) => (
-                    <FollowingItem key={index} item={item} />
+                {currentFollowing.map((item) => (
+                    <FollowingItem key={item.id} item={item} />
                 ))}
             </C.Container>
 
-            <Pagination 
-                handlePrev={handlePreviousFollowing} 
-                handleNext={handleNextFollowing} 
-                currentPage={currentPage}
-                total={totalFollowing}
-            />
+            {following.length > 0 &&
+                <Pagination 
+                    handlePrev={handlePreviousFollowing} 
+                    handleNext={handleNextFollowing} 
+                    currentPage={currentPage}
+                    total={totalFollowing}
+                />
+            }
         </Theme>
     )
 }

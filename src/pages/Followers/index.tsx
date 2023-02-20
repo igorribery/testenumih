@@ -18,6 +18,7 @@ export const Followers = () => {
     const end = start + followersPerPage;
     const currentfollowers = followers.slice(start, end);
     const totalFollowers = Math.ceil(followers.length / 10);
+
        
     useEffect(() => {
         dispatch({
@@ -72,17 +73,19 @@ export const Followers = () => {
             }
 
             <C.Container>
-                {currentfollowers.map((item, index) => (
-                    <FollowingItem key={index} item={item} />
+                {currentfollowers.map((item) => (
+                    <FollowingItem key={item.id} item={item} />
                 ))}
             </C.Container>
 
-            <Pagination 
-                handlePrev={handlePreviousFollowers}
-                handleNext={handleNextFollowers} 
-                currentPage={currentPage} 
-                total={totalFollowers}
-            />
+            {followers.length > 0 &&
+                <Pagination 
+                    handlePrev={handlePreviousFollowers}
+                    handleNext={handleNextFollowers} 
+                    currentPage={currentPage} 
+                    total={totalFollowers}
+                />
+            }
             
         </Theme>
     )
