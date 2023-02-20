@@ -9,6 +9,10 @@ Este é um projeto que utiliza React e Vite para desenvolvimento de uma aplicaç
 
 Para rodar o projeto em modo de desenvolvimento, utilize o comando **`npm run dev`**.
 
+Para buildar o projeto, utilize o comando **`npm run build`**.
+
+Para pré-visualizar o projeto buildado, utilize o comando **`npm run preview`**.
+
 # **Dependências**
 
 As principais dependências utilizadas são:
