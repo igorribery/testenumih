@@ -3,9 +3,9 @@ import { Theme } from '../../components/Theme';
 import { useEffect, useState} from 'react'
 import * as C from './styles';
 import api from '../../services/api';
-import { FollowingItem } from '../../components/FollowingItem';
 import { PageActions, userContext } from '../../contexts/userContext';
 import { Pagination } from '../../components/Pagination';
+import { FollowersItem } from '../../components/FollowersItem';
 
 export const Followers = () => {
     const { user } = useParams();
@@ -74,11 +74,11 @@ export const Followers = () => {
 
             <C.Container>
                 {currentfollowers.map((item) => (
-                    <FollowingItem key={item.id} item={item} />
+                    <FollowersItem key={item.id} item={item} />
                 ))}
             </C.Container>
 
-            {followers.length > 0 &&
+            {followers.length > 10 &&
                 <Pagination 
                     handlePrev={handlePreviousFollowers}
                     handleNext={handleNextFollowers} 

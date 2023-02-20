@@ -50,7 +50,6 @@ export const Infos = styled.div`
         width: 100%;
         
     }
-    
 `;
 
 export const Repo = styled.p<{$page: boolean}>`

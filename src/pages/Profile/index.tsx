@@ -146,12 +146,14 @@ export const Profile = () => {
                     <div>Usuário não tem nenhum repositório.</div>
                 </C.Container>
             }
-            <Pagination 
-                handlePrev={handlePrevRepos}
-                handleNext={handleNextRepos} 
-                currentPage={currentPage}
-                total={totalRepo}
-            />
+            {repos.length > 10 &&
+                <Pagination 
+                    handlePrev={handlePrevRepos}
+                    handleNext={handleNextRepos} 
+                    currentPage={currentPage}
+                    total={totalRepo}
+                />
+            }
         </Theme>
     )
 }

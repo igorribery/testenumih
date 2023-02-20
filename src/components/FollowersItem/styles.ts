@@ -13,6 +13,11 @@ export const AvatarContainer = styled.div`
         height: 50px;
         width: 50px;
         border-radius: 50%;
+
+        @media (max-width: 768px) {
+            height: 40px;
+            width: 40px;
+        }
     }
 `;
 
@@ -22,7 +27,10 @@ export const InfoContainer = styled.div`
     h1 {
         font-size: 16px;
         color: #C9D1D9;
-        
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
     }
 
 `; 

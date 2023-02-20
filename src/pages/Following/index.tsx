@@ -76,7 +76,7 @@ export const Following = () => {
                 ))}
             </C.Container>
 
-            {following.length > 0 &&
+            {following.length > 10 &&
                 <Pagination 
                     handlePrev={handlePreviousFollowing} 
                     handleNext={handleNextFollowing} 
